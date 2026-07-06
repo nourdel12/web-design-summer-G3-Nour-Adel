@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<fieldset>
+    <legend>Registration Form</legend>
+    <form autocomplete="on" method="post">
+        <label for="Firstname">Firstname:</label>
+        <input type="text" 
+         name="Firstname" 
+        maxlength="5" pattern="[A-Za-z]+"
+        placeholder="Enter your Firstname"
+        required>
+        <br><br>
+
+     <label> Email:</label> 
+     <input type="email" 
+     name="email" 
+     placeholder="Enter your email"
+     required
+     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+     <br><br>
+     <label> Phone: </label>
+     <input type="tel" 
+     name="phone" 
+     maxLength="11"
+     placeholder="Enter your phone number"
+     pattern="01 [0125][0-9]{8}"
+     required>
+     <br><br>
+
+     <label>Image:</label>
+     <input type="file" 
+     name="image" 
+     accept=".png" 
+     placeholder="Upload your image"
+     required multiple>
+     <br><br>
+     <label>Courses</label>
+       <input list="courses" name="course" placeholder="Select a course" required>
+        <datalist id="courses" required>
+            <option value="" >Select a course </option>
+            <option value="HTML">Course 1</option>
+            <option value="CSS">Course 2</option>
+            <option value="JavaScript">Course 3</option>
+            <option value="PHP">Course 4</option>
+
+        </datalist>
+        <br><br>
+        <label> Date:</label>
+        <input type="date"
+            name="date"
+            required>
+        <br><br>
+        <label>Comment</label>
+        <textarea name="comment" 
+        placeholder="Enter your comment"
+        pattern="[A-Za-z]+" >
+    </textarea>
+        <br><br>
+        <label>Range:</label>
+        <input type="range"
+            name="range"
+            min="100" 
+            max="200">
+            <br><br>
+            <Label>Gender:</Label>
+            <input type="radio" name="gender" value="male" required> <label>Male</label>
+            <input type="radio" name="gender" value="female" required> <label>Female</label>
+            <br><br>
+            <label><b>Tracks:</b></label><br><br>
+            <input type="checkbox" name="tracks" value="Frontend" required> <label>Frontend</label><br>
+            <input type="checkbox" name="tracks" value="Backend" required> <label>Backend</label><br>
+            <input type="checkbox" name="tracks" value="UI/UX" required> <label>UI/UX</label><br>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
