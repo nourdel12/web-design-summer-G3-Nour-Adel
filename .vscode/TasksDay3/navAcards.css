@@ -1,0 +1,57 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.list-style
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+.containerNav
+{
+    display:inline-block;
+
+}
+
+.float-right
+{
+    float:right;
+}
+.float-left
+{
+    float:left;
+}
+
+.container
+{
+  width:80%;
+  margin:auto;
+}
+.bg-color
+{
+      background-color:rgba(169, 169, 169, 0.879);
+}
+.padding-left-right
+{
+    padding:0% 5%;
+}
+.card
+{
+width:30%;
+display:float;
+  background-color: white;
+    box-shadow: 0px 0px 4px 3px gray;
+    padding:2%
+}
+.clear
+{
+    clear:both;
+}
