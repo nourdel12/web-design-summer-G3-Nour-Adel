@@ -1,0 +1,348 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding/border won't mess up our widths */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17303B; /* dark navy, used for basically all our text */
+  line-height: 1.6;
+}
+
+/* This wraps every section so the content doesn't
+   touch the edges of the screen and doesn't get
+   stupidly wide on huge monitors. Reuse it everywhere. */
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* centers it horizontally */
+  padding: 0 20px;
+}
+
+/* our go-to yellow button, used in a few places */
+.btn {
+  background-color: #F2B705;
+  color: #17303B;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   1. HEADER
+========================================= */
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  display: flex;              /* logo, nav, and buttons side by side */
+  align-items: center;        /* keeps them vertically centered */
+  justify-content: space-between; /* pushes them to opposite ends */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;   /* lines the nav links up horizontally */
+  gap: 24px;        /* space between each link, no margin hacks needed */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #17303B;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-actions a {
+  text-decoration: none;
+  color: #17303B;
+}
+
+
+/* =========================================
+   2. HERO
+========================================= */
+.hero {
+  background-color: #DCEEF4; /* soft blue background for the top section */
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+
+/* the little search bar sitting under the heading */
+.search-box {
+  display: flex; /* input and button next to each other */
+  max-width: 420px;
+  background: white;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+
+.search-box input {
+  flex: 1; /* input eats up all the leftover space, button stays snug */
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.hero-image-wrap {
+  position: relative; /* so the yellow card can sit on top of the photo */
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover; /* stops the photo from stretching weirdly */
+  border-radius: 10px;
+}
+
+/* the yellow contact box floating over the bottom-left of the photo */
+.hero-card {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  background-color: #F2B705;
+  padding: 16px 24px;
+  border-radius: 6px;
+  display: flex;   /* phone number and location side by side */
+  gap: 24px;
+  font-weight: bold;
+}
+
+
+/* =========================================
+   3. STATS
+========================================= */
+.stats {
+  padding: 100px 0 60px;
+}
+
+/* text on the left, number boxes on the right */
+.stats-inner {
+  display: flex;
+  flex-wrap: wrap; /* lets it drop to a single column on small screens */
+  gap: 40px;
+  align-items: center;
+}
+
+.stats-text {
+  flex: 1;         /* takes up half the row (roughly) */
+  min-width: 260px; /* stops it from getting squished too small */
+}
+
+.stats-text h2 {
+  margin-bottom: 16px;
+}
+
+.stats-text p {
+  color: #6B7B82;
+}
+
+/* the four little number cards: 748, 3854, 24, 14 */
+.stats-grid {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-wrap: wrap;   /* so it can wrap into 2 rows of 2 */
+  gap: 16px;
+}
+
+.stat-box {
+  background-color: #EFECE6;
+  padding: 24px;
+  border-radius: 10px;
+  flex: 1 1 calc(50% - 16px); /* 2 boxes per row, minus the gap */
+  min-width: 120px;
+}
+
+.stat-box h3 {
+  font-size: 28px;
+  color: #DDA400;
+  margin-bottom: 4px;
+}
+
+
+/* =========================================
+   4. APARTMENTS
+========================================= */
+.apartments {
+  background-color: #F5F3EF;
+  padding: 80px 0;
+}
+
+.apartments h2 {
+  margin-bottom: 40px;
+}
+
+/* the row of apartment listing cards */
+.apartment-grid {
+  display: flex;
+  flex-wrap: wrap;  /* wraps to a new row once it runs out of space */
+  gap: 20px;
+}
+
+.apartment-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden; /* keeps the image corners rounded too */
+  flex: 1 1 calc(33.333% - 20px); /* roughly 3 cards per row */
+  min-width: 220px;
+}
+
+.apartment-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.apartment-info {
+  padding: 16px;
+}
+
+.apartment-info h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: #DDA400;
+  font-weight: bold;
+}
+
+
+/* =========================================
+   5. HOW IT WORKS
+========================================= */
+.how-it-works {
+  padding: 80px 0;
+}
+
+.how-it-works h2 {
+  margin-bottom: 12px;
+}
+
+/* the grey intro line used above both this
+   section and the services section below */
+.section-lead {
+  color: #6B7B82;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+/* the 3 step cards side by side */
+.steps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step-card {
+  background-color: #EFECE6;
+  padding: 30px 24px;
+  border-radius: 10px;
+  flex: 1 1 calc(33.333% - 20px); /* 3 across, wraps on small screens */
+  min-width: 220px;
+}
+
+.step-number {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  color: #F2B705;
+  margin-bottom: 8px;
+}
+
+.step-card h3 {
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #6B7B82;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.step-card a {
+  color: #17303B;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #F2B705;
+  padding-bottom: 2px;
+}
+
+
+/* =========================================
+   6. SERVICES
+========================================= */
+.services {
+  background-color: #F5F3EF;
+  padding: 80px 0;
+}
+
+.services h2 {
+  margin-bottom: 12px;
+}
+
+/* image on the left, the Renting/Selling/Building
+   list stacked on the right */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+}
+
+.services-image {
+  flex: 1 1 400px; /* takes up roughly half, wraps below on mobile */
+}
+
+.services-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.services-list {
+  flex: 1 1 400px;
+}
+
+/* each Renting / Selling / Building block */
+.service-item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.service-item:last-child {
+  border-bottom: none; /* no divider line after the last one */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.service-item h3 {
+  margin-bottom: 8px;
+}
+
+.service-item p {
+  color: #6B7B82;
+  font-size: 14px;
+}
