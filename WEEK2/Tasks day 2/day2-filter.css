@@ -61,3 +61,27 @@
 {
     display:block;
 }
+.padding-margin
+{
+    margin-top: 2%;
+padding:5% ;
+}
+.table
+{
+    width:100%;
+      border-collapse: collapse;
+}
+.table th,.table tr
+{
+    padding:1%;
+    border:2px solid black;
+
+}
+tr:nth-child(odd)
+{
+    background-color: azure;
+}
+.bg-aqua
+{
+    background-color: aqua;
+}
