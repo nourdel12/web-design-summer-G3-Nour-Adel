@@ -10,7 +10,8 @@
     margin: auto;
 }
 
-nav a , footer a {
+nav a,
+footer a {
 
     text-decoration: none;
     color: rgb(93, 83, 83);
@@ -54,9 +55,8 @@ nav a , footer a {
     padding: 30px 0px;
 }
 
-.font-large
-{
-    font-size:large;
+.font-large {
+    font-size: large;
 }
 
 .btn-desgin {
@@ -65,59 +65,135 @@ nav a , footer a {
     color: white;
     width: 251px;
     height: 56px;
-    border:none;
+    border: none;
     margin-top: 30px;
 }
 
 .img-size {
-    width:80%;
-   margin-top: 20px;
+    width: 80%;
+    margin-top: 20px;
 }
 
-  .img-size img{
-    width:48%;    
-    object-fit: cover; 
+.img-size img {
+    width: 48%;
+    object-fit: cover;
     border-radius: 16px;
 }
 
-.bg-light
-{
+.bg-light {
     background-color: #F4F4F4;
 }
 
-.box
-{
-    width:58px;
-    height:57px;
-    padding:14px 16px;
+.box {
+    width: 58px;
+    height: 57px;
+    padding: 14px 16px;
     background-color: #285E67;
-    border:none;
-    border-radius:10px;
+    border: none;
+    border-radius: 10px;
 
 }
 
-.align-items-flexStart
-{
+.align-items-flexStart {
     align-items: flex-start;
 }
 
-.feature
-{
-    width:45%;
-   
+.feature {
+    width: 45%;
+
 }
 
-.margin-top
-{
-     margin-top:20px;
+.margin-top {
+    margin-top: 20px;
 }
 
-.padding
-{
-    padding:5%;
+.padding {
+    padding: 5%;
 }
 
-.bg-green
-{
+.bg-green {
     background-color: #285E67;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/*Tablet*/
+@media (max-width: 1199px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .img-size {
+        gap: 20px;
+    }
+
+    .img-size img {
+        width: 48%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .list {
+        gap: 20px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 767px) {
+
+    .container {
+        width: 95%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .img-size {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-size img {
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .btn-desgin {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
 }
