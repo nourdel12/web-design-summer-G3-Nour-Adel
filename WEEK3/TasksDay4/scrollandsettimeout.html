@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll & setTimeout Example</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    #box {
+        width: 250px;
+        height: 150px;
+        border: 2px solid black;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 10px;
+    }
+
+    .space {
+        height: 1200px;
+    }
+
+    button {
+        margin: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>Scroll Examples</h2>
+
+<button id="scrollDiv">Scroll Div</button>
+<button id="scrollPage">Scroll Page</button>
+<button id="timeoutBtn">Scroll Div After 2 Seconds</button>
+
+<div id="box">
+    <p>Item 1</p>
+    <p>Item 2</p>
+    <p>Item 3</p>
+    <p>Item 4</p>
+    <p>Item 5</p>
+    <p>Item 6</p>
+    <p>Item 7</p>
+    <p>Item 8</p>
+    <p>Item 9</p>
+    <p>Item 10</p>
+    <p>Item 11</p>
+    <p>Item 12</p>
+</div>
+
+<div class="space">
+    Scroll down the webpage...
+</div>
+
+<script>
+
+    document.getElementById("scrollDiv").onclick = function () {
+        document.getElementById("box").scrollTop = 150;
+    };
+    document.getElementById("scrollPage").onclick = function () {
+        window.scrollTo({
+            top: 500,
+            behavior: "smooth"
+        });
+    };
+    document.getElementById("timeoutBtn").onclick = function () {
+        setTimeout(function () {
+            document.getElementById("box").scrollTop = 250;
+            alert("Scrolled after 2 seconds!");
+        }, 2000);
+    };
+</script>
+
+</body>
+</html>
